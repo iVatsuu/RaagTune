@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "ms": "^2.1.2",
+    "salvage-music": "^1.0.0"
+  },
+  "name": "raagtune",
+  "version": "1.0.0",
+  "description": "RaagTune Remastered ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lavalink": "java -jar Lavalink.jar"
+  },
+  "author": "iVatsuu",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
