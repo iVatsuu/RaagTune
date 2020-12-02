@@ -11,6 +11,6 @@ module.exports = {
         if(!message.member.voice.channel) return message.channel.send(`⚠️ You have to be in a Voice Channel to use this command!`);
         if(!client.music.getQueue(message)) return message.channel.send(`❌ Nothing is playing Right Now!!`);
         await client.music.skip(message);
-        message.channel.send(`✔️ Skipped the song | Requested by ${message.author.name}`);
+        message.channel.send(`⏯ Skipped the song | Requested by ${message.author}`);
     }
 }

@@ -1,4 +1,5 @@
 const { Collection, Client, MessageEmbed, Message} = require('discord.js');
+const help = require('../commands/help');
 
 class MusicClient extends Client{
 
@@ -45,7 +46,24 @@ class MusicClient extends Client{
         this.login(token);
         this.on('ready', () => {
 
-            console.log(`RaagTune -Tuned and Ready :)`);
+            console.log(`RaagTune - Tuned and Ready :)`);
+            //Start Set-status
+            const activities = [
+
+                `${this.guilds.cache.size} Servers!`,
+                `${this.channels.cache.size} Channels!`,
+                `${this.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members!`
+
+
+            ];
+
+            let i = 0;
+            setInterval(() => this.user.setActivity(`${this.prefix}help | ${activities[i++ % activities.length]}`, {type: "WATCHING"}), 15000);
+
+
+            //end set status
+
+
         });
         this.prefix = `?`;
         this.on('message', async(message) =>{
