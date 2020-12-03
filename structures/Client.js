@@ -47,21 +47,35 @@ class MusicClient extends Client{
         this.on('ready', () => {
 
             console.log(`RaagTune - Tuned and Ready :)`);
-            //Start Set-status
-            const activities = [
+			
+           //Start Set-status
 
-                `${this.guilds.cache.size} Servers!`,
-                `${this.channels.cache.size} Channels!`,
-                `${this.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} Members!`
+        let serverCount = this.guilds.cache.size
+        setInterval(() =>{
+            serverCount = this.guilds.cache.size
+            console.log(`Servers: ${serverCount}`);
+            
+        },100000);
+
+        setInterval(async() => {
+
+            let activities = [
+
+                   `${serverCount} Servers!`
+                ];   
+             try{
+                
+                await this.user.setActivity(`${this.prefix}help | ${activities[0]}`, {type: "WATCHING"});
+
+             }catch (error){
+
+                console.log(error);
+             }
 
 
-            ];
+            },1000*60*5);
 
-            let i = 0;
-            setInterval(() => this.user.setActivity(`${this.prefix}help | ${activities[i++ % activities.length]}`, {type: "WATCHING"}), 15000);
-
-
-            //end set status
+        //End set status
 
 
         });
