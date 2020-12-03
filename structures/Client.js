@@ -48,14 +48,14 @@ class MusicClient extends Client{
 
             console.log(`RaagTune - Tuned and Ready :)`);
 			
-           //Start Set-status
+        //Start Set-status
 
         let serverCount = this.guilds.cache.size
         setInterval(() =>{
             serverCount = this.guilds.cache.size
             console.log(`Servers: ${serverCount}`);
             
-        },100000);
+        },60000);
 
         setInterval(async() => {
 
@@ -73,7 +73,7 @@ class MusicClient extends Client{
              }
 
 
-            },1000*60*5);
+            },10000);
 
         //End set status
 
