@@ -1,5 +1,5 @@
 const { Collection, Client, MessageEmbed, Message} = require('discord.js');
-const help = require('../commands/help');
+const config = require('../config/config.json');
 
 class MusicClient extends Client{
 
@@ -47,13 +47,13 @@ class MusicClient extends Client{
         this.on('ready', () => {
 
             console.log(`RaagTune - Tuned and Ready :)`);
-			
-        //Start Set-status
+            console.log(`Servers: ${this.guilds.cache.size}`);
+
+         //Start Set-status
 
         let serverCount = this.guilds.cache.size
         setInterval(() =>{
             serverCount = this.guilds.cache.size
-            console.log(`Servers: ${serverCount}`);
             
         },60000);
 
@@ -79,7 +79,25 @@ class MusicClient extends Client{
 
 
         });
-        this.prefix = `?`;
+
+        this.on('guildCreate', guildCreate =>{
+            try{
+            console.log(`Joined Guild: ${guildCreate.name} | Owner: ${guildCreate.ownerID} | Members: ${guildCreate.memberCount} | Region: ${guildCreate.region}`);
+            }catch(error){
+                console.log(error);
+            }
+        });
+
+        this.on('guildDelete', guildDelete =>{
+            try{
+            console.log(`Left Guild: ${guildDelete.name} | Owner: ${guildDelete.ownerID} | Members: ${guildDelete.memberCount} | Region: ${guildDelete.region}`);
+            }catch(error){
+                console.log(error);
+            }
+        });
+
+
+        this.prefix = config.DISCORD_BOT.PREFIX;
         this.on('message', async(message) =>{
             if(message.author.bot || !message.guild ||! message.content.toLowerCase().startsWith(this.prefix)) return;
             const [cmd, ...args] = message.content.slice(this.prefix.length).trim().split(/ +/g);
