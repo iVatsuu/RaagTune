@@ -84,7 +84,7 @@ class MusicClient extends Client{
             try{
             console.log(`Joined Guild: ${guildCreate.name} | Owner: ${guildCreate.ownerID} | Members: ${guildCreate.memberCount} | Region: ${guildCreate.region}`);
             }catch(error){
-                console.log(error);
+                console.log(`guildCreate Error: ${error}`);
             }
         });
 
@@ -92,17 +92,21 @@ class MusicClient extends Client{
             try{
             console.log(`Left Guild: ${guildDelete.name} | Owner: ${guildDelete.ownerID} | Members: ${guildDelete.memberCount} | Region: ${guildDelete.region}`);
             }catch(error){
-                console.log(error);
+                console.log(`guildDelete Error: ${error}`);
             }
         });
 
 
         this.prefix = config.DISCORD_BOT.PREFIX;
         this.on('message', async(message) =>{
-            if(message.author.bot || !message.guild ||! message.content.toLowerCase().startsWith(this.prefix)) return;
+            try{
+                if(message.author.bot || !message.guild ||! message.content.toLowerCase().startsWith(this.prefix)) return;
             const [cmd, ...args] = message.content.slice(this.prefix.length).trim().split(/ +/g);
             const command = this.getCommand(cmd.toLowerCase());
-            command.run(this, message, args).catch(console.error);
+            await command.run(this, message, args).catch(console.error);
+            }catch(error){
+                console.log(`onMessage Error: ${error}`);
+            }
         });
     };
     /**
