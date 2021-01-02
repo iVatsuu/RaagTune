@@ -35,9 +35,17 @@ RaagTune currently provides following features:
 
 -Pause: Pauses currently playing song.
 
+-Repeat: Repeats currently playing song.
+
+-Loop: Loops the entire Queue.
+
+-Loopoff: Turn off repeat and loop. .
+
 -Resume: Resumes paused song.
 
 -Volume: Lets you change the Volume
+
+-SetPrefix: Set a custom Prefix for your Guild.
 
 More features will be added in the future...
 
