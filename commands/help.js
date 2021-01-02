@@ -12,10 +12,12 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('RANDOM')
             .setTitle('__** 📌 Commands 📌 **__')
-            .addField('PREFIX: ?','-----X-----')
+            .addField('PREFIX: ? or Custom','-----X-----')
             .addFields(
+                { name: '?setprefix', value: 'Change RaagTunes prefix for your server'},
                 { name: '?p/?play:', value: 'Play Music/Search' },
-                { name: '?stop', value: 'Stops the Music and leave the channel' },
+                { name: '?radio:', value: 'Play Radio 24/7 | Usage: ?radio <hindi/english> | More Language Support will be added in future! please join support server for suggestions' },
+                { name: '?stop/?dc', value: 'Stops the Music and leaves the channel' },
                 { name: '?fs/?skip', value: 'Skip currently playing song'},
                 { name: '?pause', value: 'Pause currently playing song.' },
                 { name: '?repeat', value: 'Repeating currently playing song'},
@@ -24,6 +26,7 @@ module.exports = {
                 { name: '?resume', value: 'Resume paused song'},
                 { name: '?vol + [input value]', value: 'Sets the volume according to Input Value'},
                 { name: '?q/?queue', value: ' Displays the current Queue' },
+                { name: '?stats:', value: 'View status of RaagTune' },
                 { name: '?np', value: 'Displays currently playing song'},
                 { name: '?p/?play + [Youtube Playlist Url]', value: 'Add your youtube playlist songs in the queue. NOTE: Playlist must be PUBLIC!!'}
             )
