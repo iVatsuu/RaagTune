@@ -72,7 +72,7 @@ Node.js
 
 Npm Command Lines:
 
-npm i discord.js ms salvage-music (Note: erela.js can also be used instead of salvage-music)
+npm i discord.js ms miko-wrapper-main (Note: erela.js can also be used instead of miko-wrapper-main or salvage-music)
 npm i -D nodemon
 
 ---------------------------------------------------------------------------X------------------------------------------------------------------
