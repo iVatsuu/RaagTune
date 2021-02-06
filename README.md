@@ -47,6 +47,10 @@ RaagTune currently provides following features:
 
 -SetPrefix: Set a custom Prefix for your Guild.
 
+-rank: View your rank and xp.
+
+-leaderboard[lb]: View global leaderboard of top 10 users.
+
 More features will be added in the future...
 
 Although we are completely free but still we need to pay for our servers, So any voluntary Donations are very much appreciated :)
