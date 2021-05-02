@@ -1,9 +1,44 @@
 {
 
     "DISCORD_BOT" : {
-        "TOKEN" : "NTY4MzYyNDIyOTMxNDIzMjUz.XLg-wQ.Kfzmf-HILQG_IPcJVHu7vPqwxgk",
+        "TOKEN" : "YourSecretBotToken",
+        "GENIUS_LYRICS_SECRET_KEY" : "SECRET KEY",
+        "spotifyURL" : "https://open.spotify.com",
         "OWNER_ID": "385372586210754561",
-        "PREFIX": "?"
+        "PREFIX": "?",
+        "JOIN_CHANNEL_ID": "803526688587776011",
+        "LEFT_CHANNEL_ID": "803526775451287563",
+        "DEV_COMMANDS_CHANNEL_ID": "823483976555298826",
+        "VERSION_CURRENT": "2.5.0"
+
+    },
+
+    "DATABASE" : {
+
+        "MONGOOSE_ID" : "mongodb+srv://raagtune:EDhgPh5lbnU52Jur@cluster0.axjcj.mongodb.net/RaagTune?retryWrites=true&w=majority",
+        "CANVA_BACKIMG" : "https://www.dropbox.com/s/x6cvm4foojqueb4/raagtune-rank-card.jpg?dl=1"
+
+    },
+
+    "RADIO_CHANNELS" : {
+
+        "HINDI_1ALL" : "http://strm112.1.fm/bombaybeats_mobile_mp3",
+
+        "RADIO2_977HITS" : "http://19763.live.streamtheworld.com/977_HITS_SC",
+        "RADIO3_HITS2" : "https://22543.live.streamtheworld.com/TLPSTR09.mp3",
+        "RADIO4_HITS2021_YT" : "https://www.youtube.com/watch?v=3ZswT0i7KsI&ab_channel=LiveRadioMusic",
+        "RADIO5_HITSOLD" : "https://19763.live.streamtheworld.com/977_OLDIES.mp3",
+        "RADIO6_ILOVERADIO" : "https://streams.ilovemusic.de/iloveradio1.mp3",
+        "RADIO7_DANCE" : "https://streams.ilovemusic.de/iloveradio2.mp3",
+        "RADIO8_DANCE2" : "https://streams.ilovemusic.de/iloveradio103.mp3",
+        "RADIO9_CHILLHOP" : "https://streams.ilovemusic.de/iloveradio17.mp3",
+        "RADIO10_HIPHOP" : "https://live.powerhitz.com/hot108?aw_0_req.gdpr=true",
+        "RADIO11_CHILL" : "https://usa6.fastcast4u.com/proxy/nhhqucow2?mp=/1",
+        "RADIO12_POP" : "https://streams.ilovemusic.de/iloveradio11.mp3",
+        "RADIO13_RAP" : "https://streams.ilovemusic.de/iloveradio13.mp3",
+        "RADIO14_lOFI_YT" : "https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=ChilledCow",
+        "RADIO15_SHUFFLE_YT" : "https://www.youtube.com/watch?v=qWf-FPFmVw0&ab_channel=N%26TParty",
+        "RADIO16_STUDY_YT" : "https://www.youtube.com/watch?v=36YnV9STBqc&ab_channel=TheGoodLifeRadioxSensualMusique"
 
     }
 
