@@ -60,7 +60,7 @@ module.exports = {
                     .setOverlay("#00ff0000")
                     
                     const img = await card.build();
-                   await message.channel.send(new MessageAttachment(img, "raagtune-rank.png"));
+                    await message.channel.send(new MessageAttachment(img, "raagtune-rank.png"));
 
                    var count=16;
                    var counter= setInterval(timer, 1000); //1000 will  run it every 1 second
@@ -81,7 +81,7 @@ module.exports = {
 
             }catch(error){
                 console.error(error);
-                 m.edit('😭 Something went wrong!');
+                 m.edit('😭 Something went wrong. Maybe I dont have permission to Attach Images in this channel!');
             }
         });
         hasCooldown.add(message.author.id);

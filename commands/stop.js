@@ -19,5 +19,5 @@ module.exports = {
         await client.music.stop(message);
         await client.music.setRadio(false);
         message.channel.send(`❌ Stopped the song | Requested by ${message.author}`);
-    } 
+    }
 }

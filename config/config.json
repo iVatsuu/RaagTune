@@ -1,22 +1,22 @@
 {
 
     "DISCORD_BOT" : {
-        "TOKEN" : "YourSecretBotToken",
-        "GENIUS_LYRICS_SECRET_KEY" : "SECRET KEY",
+        "TOKEN" : "YourBotTOKEN",
+        "GENIUS_LYRICS_SECRET_KEY" : "YourGeniusLyricsTOKEN",
         "spotifyURL" : "https://open.spotify.com",
-        "OWNER_ID": "385372586210754561",
+        "OWNER_ID": "OwnerDiscordID",
         "PREFIX": "?",
-        "JOIN_CHANNEL_ID": "803526688587776011",
-        "LEFT_CHANNEL_ID": "803526775451287563",
-        "DEV_COMMANDS_CHANNEL_ID": "823483976555298826",
-        "VERSION_CURRENT": "2.5.0"
+        "JOIN_CHANNEL_ID": "JoinChannelLogID",
+        "LEFT_CHANNEL_ID": "LeftChannelLogID",
+        "DEV_COMMANDS_CHANNEL_ID": "DevCommandChannelID",
+        "VERSION_CURRENT": "2.2.0"
 
     },
 
     "DATABASE" : {
 
-        "MONGOOSE_ID" : "mongodb+srv://raagtune:EDhgPh5lbnU52Jur@cluster0.axjcj.mongodb.net/RaagTune?retryWrites=true&w=majority",
-        "CANVA_BACKIMG" : "https://www.dropbox.com/s/x6cvm4foojqueb4/raagtune-rank-card.jpg?dl=1"
+        "MONGOOSE_ID" : "MongoDBPrivateURL-ID",
+        "CANVA_BACKIMG" : "https://www.dropbox.com/s/x6cvm4foojqueb4/raagtune-rank-card.jpg?dl=1"  //RankCardImg
 
     },
 

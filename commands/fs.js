@@ -14,10 +14,10 @@ module.exports = {
 
         let roleName = message.guild.roles.cache.find(role => role.name == 'DJ');
         if(!message.member.roles.cache.get(roleName && roleName.id)) return message.channel.send(`⚠️ You must have the 'DJ' role to use this command`);
-        
-            await client.music.skip(message);
-            await client.music.setRadio(false);
-            message.channel.send(`⏯ Skipped the song | Requested by ${message.author}`); 
-        
+
+
+        await client.music.skip(message);
+        await client.music.setRadio(false);
+        message.channel.send(`⏯ Skipped the song | Requested by ${message.author}`);
     }
 }
